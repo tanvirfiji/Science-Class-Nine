@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="p199" size="20.000000 25.947302" />
+    <ImageTarget name="p118" size="20.000000 26.256281" />
+    <ImageTarget name="p74" size="20.000000 25.932415" />
+  </Tracking>
+</QCARConfig>
