@@ -45,6 +45,7 @@ public class CustomObserverEventHandler : MonoBehaviour
 
     public int Detection = 0; // Detected Means = 1; Not Detected = 0;
     public GameObject itemFX;
+    public GameObject scanCanvas;
     public GameObject spawnPoint;
 
     private string currentScene;
@@ -191,6 +192,7 @@ public class CustomObserverEventHandler : MonoBehaviour
     {
         Detection = 0;
         StopCoroutine(ShowTrackedObject());
+        scanCanvas.SetActive(true);
         UnLoad(currentScene);
 
         foreach (Transform child in transform)
@@ -239,7 +241,7 @@ public class CustomObserverEventHandler : MonoBehaviour
         
         GameObject clone = Instantiate(itemFX);
         clone.transform.SetParent(this.transform, false);
-
+        scanCanvas.SetActive(false);
         yield return new WaitForSeconds(2f);
 
         if (Detection == 1)
